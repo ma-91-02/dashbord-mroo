@@ -73,21 +73,7 @@ form h2
     z-index: 1;
 }
 
-.inputBx span::before{
-    content:"";
-    position:absolute;
-    inset: -2px;
-    /* background:#01dbc2; */
-    background: repeating-conic-gradient(
-        from var(--a),
-        #990607 0%,
-        #990607 10%,
-        transparent 10%,
-        transparent 50%
-      );
-      animation: animate 6s linear infinite;
-      box-shadow: 0 0 0 2px #211;
-}
+
 
 .inputBx span::after
 {
@@ -118,33 +104,15 @@ form h2
 
 .inputBx input[type="submit"]
 {
-    background: #fff;
+    background: #292929;
     cursor:pointer;
-    box-shadow: 0 0 0 4px #990607;
+    box-shadow: 0 0 0 2px #990607;
     width:100%;
     font-weight: 500;
-    color:#292929;
-    filter: drop-shadow(0 0 15px #990607)
+    color:#fff;
+    /* filter: drop-shadow(0 0 4px #fff) */
 
 }
 
-.group{
-    position: relative;
-    top:-10px;
-    padding-bottom: 60px;
-    display:flex;
-    justify-content:space-between
-}
-.group a{
-    text-decoration:none;
-    color:#fff8;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.75em;
-}
 
-.group a:nth-child(2),
-.group a:hover{
-    color: #01dbc2;
-    filter: drop-shadow(0 0 15px #01dbc2);
-}
+
