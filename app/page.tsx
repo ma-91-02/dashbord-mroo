@@ -1,25 +1,33 @@
-"use client"
-import { useState } from "react";
+'use client'
+import { isLoggedIn } from "@/utils/auth";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+// import { useRouter } from 'next/router';
+import withAuth from "@/components/withAut";
+import Nav from "@/components/nav";
+import { useRouter } from "next/navigation";
+import Layout from "@/components/layout";
+
 
 export default function Home() {
-  const [email, setEmail] = useState('');
-  const [pass, setPass] = useState('');
+  const router = useRouter();
+  useEffect(() => {
+    // Check if user is not logged in, redirect to login page
+    if (!isLoggedIn()) {
+      router.push('/login')
+    }
+  }, [router]);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <div className=" relative w-[400px] h-[400px] flex justify-center items-center ">
-
-        <div>
-          logo
-        </div>
-        <div className="bg-red-900 w-[30%] h-[500px] flex flex-col">
-          <div className="flex flex-col p-10 w-full h-full items-center justify-center ">
-            <input className="flex my-5 p-2 text-3xl text-center rounded-lg" type="email" placeholder="اسم المستخدم" name="" value={email} id="" />
-            <input className="flex my-5 p-2 text-3xl text-center rounded-lg" placeholder="كلمة السر" type="password" name="" value={pass} id="" />
+    <Layout>
+      {/* <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-gradient-to-tr from-[#222]  px-5 xl:px-[50px] to-[#ccc]">
+        <Nav /> */}
+        <div className=" flex justify-center items-center ">
+          <div>
+            logo
           </div>
-          <button>تسجيل الدخول</button>
+          <button >تسجيل الخروج</button>
         </div>
-      </div>
-    </main>
+      {/* </main> */}
+    </Layout>
   );
 }

@@ -102,7 +102,7 @@ form h2
     opacity: 0.5;
 }
 
-.inputBx input[type="submit"]
+.inputBx input[type="button"]
 {
     background: #292929;
     cursor:pointer;
