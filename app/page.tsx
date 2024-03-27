@@ -7,6 +7,9 @@ import withAuth from "@/components/withAut";
 import Nav from "@/components/nav";
 import { useRouter } from "next/navigation";
 import Layout from "@/components/layout";
+import MainSection from "@/components/home-page/main-section";
+import TitleSection from "@/components/home-page/title-section";
+import SectionInnovation from "@/components/home-page/section-innovation";
 
 
 export default function Home() {
@@ -19,15 +22,40 @@ export default function Home() {
   }, [router]);
   return (
     <Layout>
-      {/* <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-gradient-to-tr from-[#222]  px-5 xl:px-[50px] to-[#ccc]">
-        <Nav /> */}
-        <div className=" flex justify-center items-center ">
-          <div>
-            logo
+      <div className=" container  w-full h-full flex flex-col xl:flex-row justify-between items-start ">
+        <MainSection title="اخر المستخدمين">
+          <div className="flex justify-around flex-col items-center p-5">
+            <div className="flex w-full bg-myBlack/10 items-center justify-center m-1 rounded-xl">
+              <h4 className="text-3xl p-5">احمد محمد</h4>
+              <h4 className="text-3xl p-5">العراق</h4>
+            </div>
+            <div className="flex w-full bg-myBlack/10 items-center justify-center m-1 rounded-xl">
+              <h4 className="text-3xl p-5">عثمان محمد</h4>
+              <h4 className="text-3xl p-5">السعودية</h4>
+            </div>
+            <div className="flex w-full bg-myBlack/10 items-center justify-center m-1 rounded-xl">
+              <h4 className="text-3xl p-5">عمر سعيد</h4>
+              <h4 className="text-3xl p-5">مصر</h4>
+            </div>
           </div>
-          <button >تسجيل الخروج</button>
-        </div>
-      {/* </main> */}
+        </MainSection>
+        <MainSection title="اخر الابتكارات">
+          <SectionInnovation title="عنوان الابتكار الاول" desc=" وصف الابتكار هو عبارة عن وصف يتكون من اول ١٦٠ حرف توضح الفكرة باختصار" />
+          <SectionInnovation title="عنوان الابتكار الثاني" desc="وصف الابتكار هو عبارة عن وصف يتكون من اول ١٦٠ حرف توضح الفكرة باختصار" />
+          <SectionInnovation title="عنوان الابتكار الثالث" desc="وصف الابتكار هو عبارة عن وصف يتكون من اول ١٦٠ حرف توضح الفكرة باختصار" />
+        </MainSection>
+      </div>
+      <div className="container w-full h-full flex flex-col xl:flex-row justify-center items-start  ">
+        <MainSection title="عدد المستخدمين">
+          <span className="text-5xl w-full flex justify-center items-center h-full p-10 ">400</span>
+        </MainSection>
+        <MainSection title="عدد الابتكارات">
+          {/* <div className="flex bg-black border items-center flex-col w-full m-auto justify-center"> */}
+
+            <span className="text-5xl w-full flex justify-center items-center h-full p-10 ">400</span>
+          {/* </div> */}
+        </MainSection>
+      </div>
     </Layout>
   );
 }
