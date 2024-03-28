@@ -18,8 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className +` h-full max-h-fit overflow-hidden relative flex flex-row`}>
+        <Nav/>
+        {children}
+      </body>
     </html>
   );
 }
