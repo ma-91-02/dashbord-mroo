@@ -28,7 +28,7 @@ export default function LogIn() {
     }
   };
   return (
-    <main className='flex flex-col xl:flex-row bg-gradient-to-tr from-[#222]  px-5 xl:px-[50px] to-[#ccc]  justify-center items-center h-screen'>
+    <main className='flex w-full flex-col xl:flex-row bg-gradient-to-tr from-[#222]  px-5 xl:px-[50px] to-[#ccc]  justify-center items-center h-screen'>
       <div className='flex flex-col xl:h-full items-center justify-end xl:justify-center w-full'>
         <div className=' max-w-[200px] xl:max-w-[300px] '>
           <Image className=' ' src={'/images/logo.png'} width={400} height={400} alt='' />
